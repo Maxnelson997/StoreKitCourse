@@ -8,6 +8,12 @@
 
 import UIKit
 
+var books = [
+    MCBook(_id: 0, title: "Can't Hurt Me", author: "David Goggins", creditPrice: 1, imageUrl: "canthurtme", rating: 4, inCart: false, owned: false),
+    MCBook(_id: 1, title: "Way of The Wolf", author: "Jordan Belfort", creditPrice: 1, imageUrl: "wayofthewolf", rating: 4, inCart: false, owned: false)
+]
+
+
 class BooksController: UIViewController {
     
     fileprivate let tb: UITableView = {
@@ -53,19 +59,19 @@ class BooksController: UIViewController {
 }
 
 extension BooksController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
 
 extension BooksController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return books.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "product title and IAP price you will charge the user."
+        cell.textLabel?.text = "IAP Content Price that User Will Pay"
         return cell
     }
-    
-    
 }
