@@ -93,7 +93,8 @@ class CartController: UIViewController {
     }
     
     @objc fileprivate func handleBuy() {
-        print("trying to buy more credits")
+        let popup = MCPopup()
+        view.addSubview(popup)
     }
 }
 
