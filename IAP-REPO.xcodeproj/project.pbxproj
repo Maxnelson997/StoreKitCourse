@@ -20,6 +20,7 @@
 		790D1B4B22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4A22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift */; };
 		790D1B4D22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4C22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift */; };
 		790D1B5122A06EAB009619E7 /* MCBookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B5022A06EAB009619E7 /* MCBookViewCell.swift */; };
+		790D1B5322A072DB009619E7 /* MCCartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B5222A072DB009619E7 /* MCCartViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		790D1B4A22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BooksController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		790D1B4C22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BooksController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		790D1B5022A06EAB009619E7 /* MCBookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBookViewCell.swift; sourceTree = "<group>"; };
+		790D1B5222A072DB009619E7 /* MCCartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCartViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				790D1B4422A068BB009619E7 /* MCButton.swift */,
 				790D1B5022A06EAB009619E7 /* MCBookViewCell.swift */,
+				790D1B5222A072DB009619E7 /* MCCartViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				790D1B3D22A06618009619E7 /* CartController.swift in Sources */,
 				790D1B2A22A06400009619E7 /* ViewController.swift in Sources */,
 				790D1B5122A06EAB009619E7 /* MCBookViewCell.swift in Sources */,
+				790D1B5322A072DB009619E7 /* MCCartViewCell.swift in Sources */,
 				790D1B4322A067D5009619E7 /* UIColor+theme.swift in Sources */,
 				790D1B2822A06400009619E7 /* AppDelegate.swift in Sources */,
 				790D1B4B22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift in Sources */,

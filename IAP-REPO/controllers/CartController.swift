@@ -15,7 +15,7 @@ class CartController: UIViewController {
         tb.translatesAutoresizingMaskIntoConstraints = false
         tb.separatorStyle = .none
         tb.allowsSelection = false
-        tb.register(MCBookViewCell.self, forCellReuseIdentifier: "cell")
+        tb.register(MCCartViewCell.self, forCellReuseIdentifier: "cell")
         return tb
     }()
     
@@ -52,10 +52,10 @@ extension CartController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MCBookViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MCCartViewCell
         cell.book = books[indexPath.row]
         return cell
     }
     
-    
+
 }
