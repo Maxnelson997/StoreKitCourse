@@ -13,6 +13,7 @@
 		790D1B2F22A06401009619E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790D1B2E22A06401009619E7 /* Assets.xcassets */; };
 		790D1B3222A06401009619E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790D1B3022A06401009619E7 /* LaunchScreen.storyboard */; };
 		790D1B3B22A06444009619E7 /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B3A22A06444009619E7 /* BooksController.swift */; };
+		790D1B3D22A06618009619E7 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B3C22A06618009619E7 /* CartController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		790D1B3122A06401009619E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		790D1B3322A06401009619E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		790D1B3A22A06444009619E7 /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
+		790D1B3C22A06618009619E7 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,18 @@
 				790D1B2E22A06401009619E7 /* Assets.xcassets */,
 				790D1B3022A06401009619E7 /* LaunchScreen.storyboard */,
 				790D1B3322A06401009619E7 /* Info.plist */,
-				790D1B3A22A06444009619E7 /* BooksController.swift */,
+				790D1B3E22A0662D009619E7 /* controllers */,
 			);
 			path = "IAP-REPO";
+			sourceTree = "<group>";
+		};
+		790D1B3E22A0662D009619E7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				790D1B3C22A06618009619E7 /* CartController.swift */,
+				790D1B3A22A06444009619E7 /* BooksController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790D1B3B22A06444009619E7 /* BooksController.swift in Sources */,
+				790D1B3D22A06618009619E7 /* CartController.swift in Sources */,
 				790D1B2A22A06400009619E7 /* ViewController.swift in Sources */,
 				790D1B2822A06400009619E7 /* AppDelegate.swift in Sources */,
 			);

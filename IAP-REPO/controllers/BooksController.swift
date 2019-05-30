@@ -12,5 +12,16 @@ class BooksController: UIViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "maxreads"
         view.backgroundColor = .white
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.goToCart()
+        }
+    }
+    
+    @objc func goToCart() {
+        self.navigationController?.pushViewController(CartController(), animated: true)
     }
 }
