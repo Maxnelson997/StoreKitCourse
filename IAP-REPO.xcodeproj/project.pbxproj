@@ -17,6 +17,8 @@
 		790D1B4322A067D5009619E7 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4222A067D5009619E7 /* UIColor+theme.swift */; };
 		790D1B4522A068BB009619E7 /* MCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4422A068BB009619E7 /* MCButton.swift */; };
 		790D1B4922A06CA2009619E7 /* MCBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4822A06CA2009619E7 /* MCBook.swift */; };
+		790D1B4B22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4A22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift */; };
+		790D1B4D22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D1B4C22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		790D1B4222A067D5009619E7 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 		790D1B4422A068BB009619E7 /* MCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCButton.swift; sourceTree = "<group>"; };
 		790D1B4822A06CA2009619E7 /* MCBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBook.swift; sourceTree = "<group>"; };
+		790D1B4A22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BooksController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		790D1B4C22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BooksController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,7 @@
 				790D1B3322A06401009619E7 /* Info.plist */,
 				790D1B3E22A0662D009619E7 /* controllers */,
 				790D1B4422A068BB009619E7 /* MCButton.swift */,
-				790D1B4822A06CA2009619E7 /* MCBook.swift */,
+				790D1B4E22A06DE1009619E7 /* models */,
 			);
 			path = "IAP-REPO";
 			sourceTree = "<group>";
@@ -83,6 +87,8 @@
 			children = (
 				790D1B3C22A06618009619E7 /* CartController.swift */,
 				790D1B3A22A06444009619E7 /* BooksController.swift */,
+				790D1B4A22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift */,
+				790D1B4C22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -93,6 +99,14 @@
 				790D1B4222A067D5009619E7 /* UIColor+theme.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		790D1B4E22A06DE1009619E7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				790D1B4822A06CA2009619E7 /* MCBook.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +187,8 @@
 				790D1B2A22A06400009619E7 /* ViewController.swift in Sources */,
 				790D1B4322A067D5009619E7 /* UIColor+theme.swift in Sources */,
 				790D1B2822A06400009619E7 /* AppDelegate.swift in Sources */,
+				790D1B4B22A06DBD009619E7 /* BooksController+UITableViewDataSource.swift in Sources */,
+				790D1B4D22A06DCF009619E7 /* BooksController+UITableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
