@@ -20,7 +20,7 @@ class BooksController: UIViewController {
         tb.translatesAutoresizingMaskIntoConstraints = false
         tb.separatorStyle = .none
         tb.allowsSelection = false
-        tb.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tb.register(MCBookViewCell.self, forCellReuseIdentifier: "cell")
         return tb
     }()
     

@@ -14,8 +14,7 @@ extension BooksController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "IAP Content Price that User Will Pay"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MCBookViewCell
         return cell
     }
 }
