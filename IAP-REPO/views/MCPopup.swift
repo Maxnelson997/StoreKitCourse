@@ -68,7 +68,9 @@ class MCPopup: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
         setupViews()
+        animateIn()
     }
     
     fileprivate func setupViews() {
@@ -101,6 +103,28 @@ class MCPopup: UIView {
         buyButton.addTarget(self, action: #selector(buyCredit), for: .touchUpInside)
         buyButton.widthAnchor.constraint(equalToConstant: 108).isActive = true
         buyButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
+    }
+    
+    @objc fileprivate func animateOut() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
+            self.container.transform = CGAffineTransform(translationX: 0, y: -self.frame.height)
+            self.alpha = 0
+            self.blurView.effect = nil
+        }) { (complete) in
+            if complete {
+                self.removeFromSuperview()
+            }
+        }
+    }
+    
+    fileprivate func animateIn() {
+        self.container.transform = CGAffineTransform(translationX: 0, y: -self.frame.height)
+        self.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
+            self.alpha = 1
+            self.container.transform = .identity
+            self.blurView.effect = self.effect
+        })
     }
     
     @objc fileprivate func buyCredit() {
