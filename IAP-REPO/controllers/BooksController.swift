@@ -13,12 +13,17 @@ class BooksController: UIViewController {
         self.navigationItem.title = "maxreads"
         view.backgroundColor = .white
     
+        setupAddToCartButton()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            self.goToCart()
-        }
+    fileprivate func setupAddToCartButton() {
+        let cart = MCButton(text: "Cart", width: 108, height: 45)
+        view.addSubview(cart)
+        
+        cart.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -25).isActive = true
+        cart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25).isActive = true
+        
+        cart.addTarget(self, action: #selector(goToCart), for: .touchUpInside)
     }
     
     @objc func goToCart() {
