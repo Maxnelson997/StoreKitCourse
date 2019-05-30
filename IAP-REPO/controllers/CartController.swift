@@ -10,6 +10,7 @@ import UIKit
 
 class CartController: UIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationItem.title = "cart"
         view.backgroundColor = .white
     }

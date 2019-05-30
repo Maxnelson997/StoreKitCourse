@@ -10,6 +10,26 @@ import UIKit
 
 class MCBookViewCell: UITableViewCell {
     
+    var book: MCBook? {
+        didSet {
+            guard let book = book else { return }
+            self.coverImage.image = UIImage(named: book.imageUrl)
+            self.titleLabel.text = book.title
+            self.authorLabel.text = book.author
+            self.creditLabel.text = "\(book.creditPrice) credit"
+            self.ratingLabel.text = "\(book.rating)/5"
+            
+            if book.inCart {
+                self.creditLabel.text = "added to cart"
+                self.addToCartButton.backgroundColor = .gray
+            }
+            if book.owned {
+                self.creditLabel.text = "You own this book"
+                self.addToCartButton.backgroundColor = .gray
+            }
+        }
+    }
+    
     let coverImage:UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false

@@ -15,6 +15,7 @@ extension BooksController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MCBookViewCell
+        cell.book = books[indexPath.row]
         return cell
     }
 }

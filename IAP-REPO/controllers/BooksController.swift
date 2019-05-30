@@ -25,9 +25,11 @@ class BooksController: UIViewController {
     }()
     
     override func viewDidLoad() {
-        self.navigationItem.title = "maxreads"
+        super.viewDidLoad()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationItem.title = "maxreads"
         view.backgroundColor = .white
-    
+        
         setupAddToCartButton()
         setupTableView()
     }
