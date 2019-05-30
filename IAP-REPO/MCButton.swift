@@ -9,7 +9,7 @@
 import UIKit
 
 class MCButton: UIButton {
-    init(text: String, width: CGFloat = 108, height: CGFloat = 45) {
+    init(text: String, width: CGFloat = 108, height: CGFloat = 45, hasShadow: Bool = true) {
         super.init(frame: .zero)
         
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,18 @@ class MCButton: UIButton {
         self.backgroundColor = .primaryOne
         self.setTitle(text, for: .normal)
         
+        hasShadow ? setupShadow(height, width) : ()
+        
         self.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+    }
+    
+    fileprivate func setupShadow(_ height: CGFloat, _ width: CGFloat) {
+        let shadowSize: CGFloat = 20
+        let contactRect = CGRect(x: 0, y: height - (shadowSize * 0.6), width: width, height: shadowSize)
+        self.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
+        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowColor = UIColor.primaryOne.cgColor
     }
     
     required init?(coder aDecoder: NSCoder) {
