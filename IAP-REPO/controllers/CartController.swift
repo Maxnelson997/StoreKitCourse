@@ -28,6 +28,7 @@ class CartController: UIViewController {
         view.backgroundColor = .white
         
         setupTableView()
+        setupCartLabels()
         setupCartButtons()
     }
     
@@ -41,7 +42,7 @@ class CartController: UIViewController {
         tb.delegate = self
     }
     
-    fileprivate func setupCartButtons() {
+    fileprivate func setupCartLabels() {
         totalLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         totalLabel.text = "Total: 0 credits"
         
@@ -69,7 +70,31 @@ class CartController: UIViewController {
         line1.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
+    fileprivate func setupCartButtons() {
+        let payButton = MCButton(text: "Pay", width: 108, height: 45)
+        let buyAnotherCreditButton = MCButton(text: "Buy Another Credit", width: UIScreen.main.bounds.width - 108 - 20 - 40, height: 45)
+        
+        let buttonStack = UIStackView(arrangedSubviews: [buyAnotherCreditButton, payButton])
+        buttonStack.translatesAutoresizingMaskIntoConstraints = false
+        buttonStack.spacing = 20
+        
+        view.addSubview(buttonStack)
+        
+        buttonStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
+        buttonStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        buttonStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        
+        payButton.addTarget(self, action: #selector(handlePay), for: .touchUpInside)
+        buyAnotherCreditButton.addTarget(self, action: #selector(handleBuy), for: .touchUpInside)
+    }
     
+    @objc fileprivate func handlePay() {
+        print("trying to pay for books")
+    }
+    
+    @objc fileprivate func handleBuy() {
+        print("trying to buy more credits")
+    }
 }
 
 extension CartController: UITableViewDelegate {
